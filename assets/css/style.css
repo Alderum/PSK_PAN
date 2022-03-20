@@ -1,0 +1,511 @@
+body {
+  margin: 0;
+
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  background: url(../images/house.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.intro__inner {
+  text-align: center;
+}
+
+.intro__title {
+  font-size: 90px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 auto 50px;
+
+  color: #fff;
+}
+
+/* Hedder */
+.hedder {
+  width: 100%;
+  padding-top: 15px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.hedder__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hedder__logo {
+  font-size: 30px;
+  font-weight: 150;
+  color: #fff;
+}
+
+/* Nav */
+.nav {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.nav__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px 30px;
+  position: relative;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition: color 0.3s linear;
+}
+
+.nav__link:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+
+  background-color: #00ffff;
+  opacity: 0;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+
+  transition: opacity 0.2s linear;
+}
+
+.nav__link:hover {
+  color: #00ffff;
+}
+
+.nav__link:hover:after {
+  opacity: 1;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 20px;
+
+  border: 2px solid #fff;
+
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+
+  transition: border 0.5s linear, color 0.5s linear, background 0.5s linear;
+}
+
+.btn:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+  background-color: #000;
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  justify-content: space-between;
+  transform: translate(0, 150%);
+}
+
+.slider__item {
+  width: 24%;
+  padding: 20px 3px;
+
+  border-top: 2px solid #fff;
+  opacity: 0.2;
+
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.slider__num {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Section */
+.section {
+  padding: 50px 0;
+}
+
+.section2__inner {
+  padding: 20px 0;
+  border-top: 2px solid #000;
+  background: url(../images/appartament.jpg);
+}
+
+.section__hedder {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 18px;
+}
+
+.section2__title {
+  font-size: 18px;
+  color: #fff;
+}
+
+.section__suptitle {
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section__text {
+  font-size: 14px;
+}
+
+.section2__text {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Card */
+.card {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 60px;
+}
+
+.card__item {
+  width: 380px;
+  position: relative;
+
+  background-color: #c0c0c0;
+}
+
+.card__2 {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 5px;
+}
+
+.card__item:hover .card__img {
+  transform: translate(-10px, -10px);
+}
+
+.card__item:hover .card__img img {
+  opacity: 0.2;
+}
+
+.card__item:hover .card__text {
+  opacity: 1;
+  transform: translate(-10px, -25px);
+}
+
+.card__img {
+  background: linear-gradient(to bottom, #00ffff, #fff);
+
+  transition: transform 0.2s linear;
+}
+
+.card__img img {
+  display: block;
+  transition: opacity 0.1s linear;
+}
+
+.card__text {
+  width: 100%;
+
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  transform: translate(0, -50%);
+
+  transition: opacity 0.1s linear, transform 0.2s linear;
+}
+
+/* Services */
+.services {
+  display: flex;
+}
+
+.services__item {
+  flex: 1 1 0;
+  padding-left: 50px;
+  position: relative;
+}
+
+.services__icon {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  z-index: 1;
+}
+
+.services__title {
+  margin-bottom: 5px;
+
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.services__text {
+  font-size: 15px;
+  color: #999;
+}
+
+/* Accordion */
+.accordion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion__element {
+  position: relative;
+
+  max-width: 7.4em;
+  margin-right: auto;
+  padding-right: 10px;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+
+  width: 350%;
+}
+
+.accordion__inner {
+  border: none;
+  height: 30px;
+  width: 350%;
+  text-align: left;
+
+  transition: background-color 0.1s linear;
+}
+
+.accordion__inner:hover {
+  background-color: #00ffff;
+}
+
+.accordion__inner::after {
+  content: "\002B";
+  float: right;
+  margin-right: 5px;
+}
+
+.active::after {
+  content: "\2212";
+}
+
+/* Footer */
+.footer {
+  padding-top: 50px;
+
+  background-color: rgb(12, 12, 12);
+}
+
+.footer__inner {
+  padding-bottom: 65px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.footer__col--first {
+  width: 40%;
+}
+
+.footer__col--second {
+  width: 29%;
+  color: #fff;
+}
+
+.footer__col--third {
+  width: 23%;
+  color: #fff;
+}
+
+.footer__title {
+  margin: 30px 0;
+
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer__logo {
+  padding-bottom: 20px;
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer__text {
+  color: #fff;
+}
+
+.footer__social-content {
+  color: #fff;
+}
+
+/* Contacts */
+.contact__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact__img {
+  width: 30px;
+  height: 30px;
+}
+
+.content__title {
+  padding-left: 10px;
+  color: #fff;
+  line-height: 1.2;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.content__title:hover {
+  text-decoration: underline;
+}
+
+/* Director and some about us */
+.director__item {
+  display: flex;
+}
+
+.director__img {
+  width: 120px;
+  height: 60px;
+}
+
+.director__title {
+  padding-left: 10px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1.2;
+  text-decoration: none;
+  transform: translate(0, -15px);
+}
+.director__title--second {
+  transform: translate(0, -25px);
+}
+
+/* Subscribe */
+.subscribe {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+}
+
+.subscribe__input {
+  width: 60%;
+  height: 40px;
+  padding: 12px;
+
+  background: #fff;
+  border: 1px solid #999;
+  border-right: 0;
+
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 15px;
+  color: #999;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.subscribe__input::placeholder {
+  color: #ccc;
+}
+
+.subscribe__input:focus {
+  outline: 0;
+  border-color: #00ffff;
+}
+
+.subscribe__button {
+  width: 40%;
+  height: 40px;
+  padding: 5px 30px;
+
+  background-color: #00ffff;
+  border: 0;
+  cursor: pointer;
+
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  transition: background-color 0.2s linear;
+}
+
+.subscribe__button:hover {
+  background-color: #00ffff9f;
+}
+
+.subscribe__button:focus {
+  outline: 0;
+}
