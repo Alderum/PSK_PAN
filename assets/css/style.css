@@ -122,6 +122,26 @@ h6 {
   opacity: 1;
 }
 
+.nav__experimental {
+  margin: 5px 30px;
+
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 50px;
+  height: 22.5px;
+
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.nav__border {
+  width: 50px;
+  height: 10px;
+
+  border-bottom: 2px solid white;
+}
+
 /* Button */
 .btn {
   display: inline-block;
