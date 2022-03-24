@@ -124,22 +124,49 @@ h6 {
 
 .nav__experimental {
   margin: 5px 30px;
+  width: 50px;
+  height: 22.5px;
 
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 50px;
-  height: 22.5px;
 
   border-bottom: 2px solid white;
   border-top: 2px solid white;
+
+  transition: border 0.5s linear;
+}
+
+.nav__experimental:hover {
+  border-bottom: 2px solid #00ffff;
+  border-top: 2px solid #00ffff;
 }
 
 .nav__border {
   width: 50px;
-  height: 10px;
+  height: 20px;
+  margin-top: 8px;
 
-  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+
+  transition: border 0.5s linear;
+}
+
+.nav__experimental:hover .nav__border {
+  border-top: 2px solid #00ffff;
+}
+
+.nav__content {
+  width: 200px;
+  height: 35px;
+
+  transform: translate(-75%, 0);
+
+  padding-left: 10px;
+
+  color: white;
+  background-color: #000;
+  border: 1px solid white;
 }
 
 /* Button */
